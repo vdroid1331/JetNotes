@@ -35,6 +35,7 @@ import com.vinayakgupta3112.jetnotes.components.NoteButton
 import com.vinayakgupta3112.jetnotes.components.NoteInputText
 import com.vinayakgupta3112.jetnotes.data.NotesDataSource
 import com.vinayakgupta3112.jetnotes.model.Note
+import com.vinayakgupta3112.jetnotes.util.formatDate
 import java.time.format.DateTimeFormatter
 
 @Composable
@@ -141,10 +142,10 @@ fun NoteRow(
                 text = note.description,
                 style = MaterialTheme.typography.subtitle1
             )
-//            Text(
-//                text = note.entryDate.format(DateTimeFormatter.ofPattern("EEE, d MMM")),
-//                style = MaterialTheme.typography.caption
-//            )
+            Text(
+                text = formatDate(note.entryDate.time),
+                style = MaterialTheme.typography.caption
+            )
         }
     }
 }

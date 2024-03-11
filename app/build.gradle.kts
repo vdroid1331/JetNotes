@@ -64,6 +64,9 @@ dependencies {
     implementation(libs.androidx.material)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.hilt.android)
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.kotlinx.coroutines.play.services)
     ksp(libs.hilt.compiler)
 //    implementation(libs.androidx.room.ktx)
     // added for room
